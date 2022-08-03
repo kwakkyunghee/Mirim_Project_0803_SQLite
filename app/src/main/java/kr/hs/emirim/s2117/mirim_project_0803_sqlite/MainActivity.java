@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                     db = dbHelper.getReadableDatabase();//select문이라서 getReadableDatabase()
                     Cursor c = db.rawQuery("select * from idolTbl;", null);//중간에 들어가는 인수가 없어서 null
 
-                    String strName = "아이돌명\r\n__________\r\n";
+                    String strName = "아이돌명\r\n__________\r\n";//\r 현재 커서를 맨앞으로가서 첫번째줄로 옮김
                     String strCnt = "인원수\r\n__________\r\n";
 
                     while(c.moveToNext()){
